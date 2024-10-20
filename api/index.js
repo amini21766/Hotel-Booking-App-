@@ -22,9 +22,14 @@ mongoose
     console.log("Mongodb connection Error: ", err);
   });
 
+// public route
+app.get("/", (req, res)=> {
+  res.send("Welcome to Booking App!")
+})
 
 
 // middlewares
+app.use(express.json())
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/hotels", hotelRoute);
 app.use("/api/v1/rooms", roomRoute);
