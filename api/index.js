@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/hotels", hotelRoute);
 app.use("/api/v1/rooms", roomRoute);
-app.use("/api/v1/user", userRoute);
+app.use("/api/v1/users", userRoute);
 
 // Error handler
 app.use((err, req, res, next) => {
